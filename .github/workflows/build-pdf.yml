@@ -20,7 +20,7 @@ jobs:
       - name: Install Pandoc and Chromium
         run: |
           sudo apt-get update
-          sudo apt-get install -y pandoc chromium-browser
+          sudo apt-get install -y pandoc chromium-browser fonts-noto-color-emoji fonts-liberation
 
       - name: Generate PDFs with Chromium
         run: |
@@ -38,14 +38,15 @@ jobs:
             pandoc "$input_md" -o temp_resume.html \
               --standalone \
               --css=.github/styles/resume.css \
-              --metadata title="$title" \
               --embed-resources
             
             # Convert HTML to PDF using Chromium
             chromium-browser --headless=new --disable-gpu \
               --print-to-pdf="$output_pdf" \
               --no-margins \
+              --no-pdf-header-footer \
               --run-all-compositor-stages-before-draw \
+              --virtual-time-budget=10000 \
               "file://$(pwd)/temp_resume.html"
             
             # Clean up temp file

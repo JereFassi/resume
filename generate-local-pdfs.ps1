@@ -52,7 +52,6 @@ function Convert-MarkdownToPdf {
     pandoc $InputFile -o $tempHtml `
         --standalone `
         --css=.github/styles/resume.css `
-        --metadata title="$Title" `
         --embed-resources
     
     if ($LASTEXITCODE -ne 0) {
@@ -76,6 +75,7 @@ function Convert-MarkdownToPdf {
         "--disable-gpu"
         "--print-to-pdf=$pdfPath"
         "--no-margins"
+        "--no-pdf-header-footer"
         "--run-all-compositor-stages-before-draw"
         "file:///$($htmlPath.Replace('\', '/'))"
     )

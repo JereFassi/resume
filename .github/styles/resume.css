@@ -1,183 +1,196 @@
 /* Resume PDF Styling */
 
+/* Better font rendering */
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
 /* Page layout */
 body {
-    font-family: 'Segoe UI', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji', 'Apple Color Emoji', Arial, sans-serif;
-    font-size: 11pt;
-    line-height: 1.5;
-    color: #2c3e50;
-    max-width: 100%;
-    margin: 0 auto;
-    padding: 20px;
+  font-family: "Segoe UI", "Segoe UI Emoji", "Segoe UI Symbol",
+    "Noto Color Emoji", "Apple Color Emoji", "DejaVu Sans", Arial, sans-serif;
+  font-size: 11pt;
+  line-height: 1.5;
+  color: #2c3e50;
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 20px;
+  background: white;
 }
 
 /* Headers */
 h1 {
-    font-family: 'Segoe UI', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji', 'Apple Color Emoji', Arial, sans-serif;
-    font-size: 28pt;
-    font-weight: bold;
-    color: #1a252f;
-    margin-bottom: 5px;
-    border-bottom: 3px solid #3498db;
-    padding-bottom: 10px;
+  font-family: "Segoe UI", "Segoe UI Emoji", "Segoe UI Symbol",
+    "Noto Color Emoji", "Apple Color Emoji", "DejaVu Sans", Arial, sans-serif;
+  font-size: 28pt;
+  font-weight: bold;
+  color: #1a252f;
+  margin-bottom: 5px;
+  border-bottom: 3px solid #3498db;
+  padding-bottom: 10px;
 }
 
 h2 {
-    font-family: 'Segoe UI', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji', 'Apple Color Emoji', Arial, sans-serif;
-    font-size: 16pt;
-    font-weight: bold;
-    color: #2c3e50;
-    margin-top: 25px;
-    margin-bottom: 12px;
-    border-bottom: 2px solid #ecf0f1;
-    padding-bottom: 5px;
+  font-family: "Segoe UI", "Segoe UI Emoji", "Segoe UI Symbol",
+    "Noto Color Emoji", "Apple Color Emoji", "DejaVu Sans", Arial, sans-serif;
+  font-size: 16pt;
+  font-weight: bold;
+  color: #2c3e50;
+  margin-top: 25px;
+  margin-bottom: 12px;
+  border-bottom: 2px solid #ecf0f1;
+  padding-bottom: 5px;
 }
 
 h3 {
-    font-family: 'Segoe UI', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji', 'Apple Color Emoji', Arial, sans-serif;
-    font-size: 13pt;
-    font-weight: bold;
-    color: #34495e;
-    margin-top: 15px;
-    margin-bottom: 8px;
+  font-family: "Segoe UI", "Segoe UI Emoji", "Segoe UI Symbol",
+    "Noto Color Emoji", "Apple Color Emoji", "DejaVu Sans", Arial, sans-serif;
+  font-size: 13pt;
+  font-weight: bold;
+  color: #34495e;
+  margin-top: 15px;
+  margin-bottom: 8px;
 }
 
 /* Links */
 a {
-    color: #3498db;
-    text-decoration: none;
+  color: #3498db;
+  text-decoration: none;
 }
 
 a:hover {
-    text-decoration: underline;
+  text-decoration: underline;
 }
 
 /* Strong/Bold text */
 strong {
-    color: #2c3e50;
-    font-weight: 600;
+  color: #2c3e50;
+  font-weight: 600;
 }
 
 /* Code and inline code */
 code {
-    background-color: #f8f9fa;
-    padding: 2px 6px;
-    border-radius: 3px;
-    font-family: 'Courier New', monospace;
-    font-size: 10pt;
-    color: #e74c3c;
+  background-color: #f8f9fa;
+  padding: 2px 6px;
+  border-radius: 3px;
+  font-family: "Courier New", monospace;
+  font-size: 10pt;
+  color: #e74c3c;
 }
 
 /* Lists */
 ul {
-    margin-left: 20px;
-    margin-bottom: 10px;
+  margin-left: 20px;
+  margin-bottom: 10px;
 }
 
 li {
-    margin-bottom: 5px;
+  margin-bottom: 5px;
 }
 
 /* Blockquotes */
 blockquote {
-    border-left: 4px solid #3498db;
-    background-color: #ecf0f1;
-    padding: 10px 15px;
-    margin: 15px 0;
-    font-style: italic;
-    color: #34495e;
+  border-left: 4px solid #3498db;
+  background-color: #ecf0f1;
+  padding: 10px 15px;
+  margin: 15px 0;
+  font-style: italic;
+  color: #34495e;
 }
 
 /* Horizontal rules */
 hr {
-    border: none;
-    border-top: 2px solid #bdc3c7;
-    margin: 20px 0;
+  border: none;
+  border-top: 2px solid #bdc3c7;
+  margin: 20px 0;
 }
 
 /* Images */
 img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 5px;
+  max-width: 100%;
+  height: auto;
+  border-radius: 5px;
 }
 
 /* Contact section formatting */
 p strong:first-child {
-    color: #2c3e50;
+  color: #2c3e50;
 }
 
 /* Spacing adjustments */
 p {
-    margin-bottom: 8px;
+  margin-bottom: 8px;
 }
 
 /* Education/Experience sections with icons (emojis) */
 h2::before {
-    margin-right: 8px;
+  margin-right: 8px;
 }
 
 /* Professional styling for job titles */
 h3 + p strong {
-    color: #16a085;
+  color: #16a085;
 }
 
 /* Location and date icons spacing */
 h3 + p {
-    color: #7f8c8d;
-    font-size: 10pt;
+  color: #7f8c8d;
+  font-size: 10pt;
 }
 
 /* Skills section bullet styling */
 h3 + ul li strong {
-    color: #2980b9;
+  color: #2980b9;
 }
 
 /* Table styling (if any) */
 table {
-    border-collapse: collapse;
-    width: 100%;
-    margin: 15px 0;
+  border-collapse: collapse;
+  width: 100%;
+  margin: 15px 0;
 }
 
-th, td {
-    border: 1px solid #ddd;
-    padding: 8px;
-    text-align: left;
+th,
+td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
 }
 
 th {
-    background-color: #3498db;
-    color: white;
-    font-weight: bold;
+  background-color: #3498db;
+  color: white;
+  font-weight: bold;
 }
 
 /* Page breaks */
 .page-break {
-    page-break-after: always;
+  page-break-after: always;
 }
 
 /* Print-specific adjustments */
 @media print {
-    body {
-        font-size: 10pt;
-    }
-    
-    h1 {
-        font-size: 24pt;
-    }
-    
-    h2 {
-        font-size: 14pt;
-        page-break-after: avoid;
-    }
-    
-    h3 {
-        font-size: 12pt;
-        page-break-after: avoid;
-    }
-    
-    a {
-        color: #2980b9;
-    }
+  body {
+    font-size: 10pt;
+  }
+
+  h1 {
+    font-size: 24pt;
+  }
+
+  h2 {
+    font-size: 14pt;
+    page-break-after: avoid;
+  }
+
+  h3 {
+    font-size: 12pt;
+    page-break-after: avoid;
+  }
+
+  a {
+    color: #2980b9;
+  }
 }

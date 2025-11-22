@@ -110,6 +110,9 @@ Acostumbrado a **responsabilidades de nivel administrador** en múltiples cuenta
 
 ## 🎓 Experiencia Académica
 
+<img src="img/Logo_UTN-FRBB.png" alt="Universidad Tecnológica Nacional - Bahía Blanca" width="120" height="60" align="right" style="margin-left: 10px; margin-bottom: 10px;"/>
+<img src="img/UTN_logo.jpg" alt="Universidad Tecnológica Nacional" width="120" height="120" align="right" style="margin-left: 10px;"/>
+
 ### Docente – Tecnicatura Universitaria en Programación
 
 **Universidad Tecnológica Nacional (UTN – FRBB)**  
