@@ -17,16 +17,48 @@ jobs:
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Install Pandoc
-        run: sudo apt-get update && sudo apt-get install -y pandoc wkhtmltopdf
+      - name: Install Pandoc and Chromium
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y pandoc chromium-browser
 
-      - name: Generate PDFs
+      - name: Generate PDFs with Chromium
         run: |
           mkdir -p pdf
-          pandoc jere-cloud-resume-en.md -o pdf/jere-cloud-resume-en.pdf --pdf-engine=wkhtmltopdf
-          pandoc jere-cloud-resume-es.md -o pdf/jere-cloud-resume-es.pdf --pdf-engine=wkhtmltopdf
-          pandoc jere-basic-resume.md -o pdf/jere-basic-resume.pdf --pdf-engine=wkhtmltopdf
-          pandoc resume-ATS.md -o pdf/resume-ATS.pdf --pdf-engine=wkhtmltopdf
+          
+          # Function to convert markdown to PDF via Chromium
+          convert_to_pdf() {
+            local input_md=$1
+            local output_pdf=$2
+            local title=$3
+            
+            echo "Generating $output_pdf..."
+            
+            # Convert markdown to HTML with Pandoc
+            pandoc "$input_md" -o temp_resume.html \
+              --standalone \
+              --css=.github/styles/resume.css \
+              --metadata title="$title" \
+              --embed-resources
+            
+            # Convert HTML to PDF using Chromium
+            chromium-browser --headless=new --disable-gpu \
+              --print-to-pdf="$output_pdf" \
+              --no-margins \
+              --run-all-compositor-stages-before-draw \
+              "file://$(pwd)/temp_resume.html"
+            
+            # Clean up temp file
+            rm -f temp_resume.html
+          }
+          
+          # Generate all PDFs
+          convert_to_pdf "jere-cloud-resume-en.md" "pdf/jere-cloud-resume-en.pdf" "Lucas Jeremias Fassi - Cloud Resume"
+          convert_to_pdf "jere-cloud-resume-es.md" "pdf/jere-cloud-resume-es.pdf" "Lucas Jeremias Fassi - CV Cloud"
+          convert_to_pdf "jere-basic-resume.md" "pdf/jere-basic-resume.pdf" "Lucas Jeremias Fassi - Resume"
+          convert_to_pdf "resume-ATS.md" "pdf/resume-ATS.pdf" "Lucas Jeremias Fassi - Resume (ATS)"
+          
+          echo "All PDFs generated successfully with emoji support!"
 
       - name: Commit PDFs
         if: github.ref == 'refs/heads/main'
