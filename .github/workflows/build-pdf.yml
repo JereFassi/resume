@@ -18,6 +18,7 @@ jobs:
       - name: Generate PDFs
         run: |
           pandoc jere-cloud-resume.md -o jere-cloud-resume.pdf --pdf-engine=wkhtmltopdf
+          pandoc jere-cloud-resume-es.md -o jere-cloud-resume-es.pdf --pdf-engine=wkhtmltopdf
           pandoc jere-basic-resume.md -o jere-basic-resume.pdf --pdf-engine=wkhtmltopdf
           pandoc resume-ATS.md -o resume-ATS.pdf --pdf-engine=wkhtmltopdf
 
@@ -27,6 +28,7 @@ jobs:
           name: resumes-pdf
           path: |
             jere-cloud-resume.pdf
+            jere-cloud-resume-es.pdf
             jere-basic-resume.pdf
             resume-ATS.pdf
 

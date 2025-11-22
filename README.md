@@ -3,6 +3,7 @@
 This repository hosts my resume in multiple developer-friendly formats:
 
 - `jere-cloud-resume.md` – Cloud & infrastructure-focused version (AWS admin, DevOps, part-time roles).
+- `jere-cloud-resume-es.md` – Versión en español del CV enfocado en cloud/infraestructura.
 - `jere-basic-resume.md` – General software engineer version (broader scope).
 - `resume-ATS.md` – Plain, ATS-optimized version (minimal styling).
 - `resume.json` – JSON Resume schema representation (portable, API-friendly).
@@ -20,6 +21,7 @@ This repository hosts my resume in multiple developer-friendly formats:
 | File                              | Purpose                                                              |
 | --------------------------------- | -------------------------------------------------------------------- |
 | `jere-cloud-resume.md`            | Cloud/infrastructure-focused resume for AWS admin & DevOps roles.    |
+| `jere-cloud-resume-es.md`         | Spanish version of cloud-focused resume.                             |
 | `jere-basic-resume.md`            | General software engineering resume (backend, full-stack, teaching). |
 | `resume-ATS.md`                   | Simplified ATS-optimized version.                                    |
 | `resume.json`                     | Structured data for tooling / APIs based on JSON Resume schema.      |
@@ -31,6 +33,7 @@ Requires [Pandoc](https://pandoc.org/) installed. On Windows (PowerShell):
 
 ```powershell
 pandoc jere-cloud-resume.md -o jere-cloud-resume.pdf
+pandoc jere-cloud-resume-es.md -o jere-cloud-resume-es.pdf
 pandoc jere-basic-resume.md -o jere-basic-resume.pdf
 pandoc resume-ATS.md -o resume-ATS.pdf
 ```
@@ -56,7 +59,7 @@ On every push to `main`, the workflow:
 3. Generates PDFs for both Markdown versions.
 4. Uploads them as build artifacts.
 
-Download from the Actions run summary. (You can modify workflow to commit PDFs to a `dist/` folder, but artifacts avoid noisy commits.)
+Download from the Actions run summary.
 
 ## JSON Resume Usage
 
@@ -76,7 +79,6 @@ resume export resume.html
 
 ## Suggested Future Enhancements
 
-- Add quantified achievements (cost reduction %, performance gains, incident MTTR improvements).
 - Add Spanish and Portuguese localized versions (`JereCV-es.md`, `JereCV-pt.md`).
 - Integrate shields (e.g. GitHub profile visits) in README.
 - Add a changelog summarizing major updates.
