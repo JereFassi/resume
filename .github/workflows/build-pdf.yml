@@ -1,5 +1,8 @@
 name: Build Resume PDFs
 
+permissions:
+  contents: write
+
 on:
   push:
     branches: ["main"]
@@ -11,6 +14,8 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Install Pandoc
         run: sudo apt-get update && sudo apt-get install -y pandoc wkhtmltopdf
@@ -24,12 +29,24 @@ jobs:
           pandoc resume-ATS.md -o pdf/resume-ATS.pdf --pdf-engine=wkhtmltopdf
 
       - name: Commit PDFs
+        if: github.ref == 'refs/heads/main'
         run: |
-          git config --local user.email "github-actions[bot]@users.noreply.github.com"
-          git config --local user.name "github-actions[bot]"
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
           git add pdf/*.pdf
-          git diff --staged --quiet || git commit -m "Auto-generate PDFs [skip ci]"
-          git push
+          if ! git diff --cached --quiet; then
+            git commit -m "Update PDF resumes [skip ci]"
+            git push
+          else
+            echo "No PDF changes to commit"
+          fi
+
+      - name: Upload PDFs as artifacts (fallback)
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: pdf-resumes
+          path: pdf/*.pdf
 
       - name: Validate JSON Resume (optional)
         if: hashFiles('resume.json') != ''

@@ -129,11 +129,11 @@ Accustomed to **admin-level responsibilities** across multiple AWS accounts: acc
 
 ## 🎓 Education
 
+<img src="img/UNS-logo.png" alt="Universidad Nacional del Sur" width="120" align="right"/>
+
 ### Computer Systems Engineer (MEQ)
 
-**Universidad Nacional del Sur** – Bahía Blanca, Argentina
-
-**[Universidad Nacional del Sur](https://uns.edu.ar)** |
+**[Universidad Nacional del Sur](https://uns.edu.ar)** – Bahía Blanca, Argentina  
 **[Computer Science Department](https://cs.uns.edu.ar)**
 
 **Final Project (Thesis):**  

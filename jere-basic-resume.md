@@ -63,7 +63,9 @@ Topics: OS fundamentals, system architecture, Git, Docker, software methodologie
 
 ## Education
 
-**Computer Systems Engineer (MEQ)** — Universidad Nacional del Sur  
+<img src="img/UNS-logo.png" alt="Universidad Nacional del Sur" width="100" align="right"/>
+
+**Computer Systems Engineer (MEQ)** — [Universidad Nacional del Sur](https://uns.edu.ar)  
 Thesis: IoT-based classroom energy optimization system.  
 Award: 3rd place CoNaIISI 2020 (Final Degree Projects)
 

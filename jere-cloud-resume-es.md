@@ -129,9 +129,12 @@ Acostumbrado a **responsabilidades de nivel administrador** en múltiples cuenta
 
 ## 🎓 Educación
 
+<img src="img/UNS-logo.png" alt="Universidad Nacional del Sur" width="120" align="right"/>
+
 ### Ingeniero en Sistemas de Computación (MEQ)
 
-**Universidad Nacional del Sur** – Bahía Blanca, Argentina
+**[Universidad Nacional del Sur](https://uns.edu.ar)** – Bahía Blanca, Argentina  
+**[Departamento de Ciencias e Ingeniería de la Computación](https://cs.uns.edu.ar)**
 
 **[Universidad Nacional del Sur](https://uns.edu.ar)** |
 **[Departamento de Ciencias de la Computación](https://cs.uns.edu.ar)**
