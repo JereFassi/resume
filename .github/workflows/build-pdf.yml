@@ -23,7 +23,7 @@ jobs:
       - name: Generate PDFs
         run: |
           mkdir -p pdf
-          pandoc jere-cloud-resume.md -o pdf/jere-cloud-resume.pdf --pdf-engine=wkhtmltopdf
+          pandoc jere-cloud-resume-en.md -o pdf/jere-cloud-resume-en.pdf --pdf-engine=wkhtmltopdf
           pandoc jere-cloud-resume-es.md -o pdf/jere-cloud-resume-es.pdf --pdf-engine=wkhtmltopdf
           pandoc jere-basic-resume.md -o pdf/jere-basic-resume.pdf --pdf-engine=wkhtmltopdf
           pandoc resume-ATS.md -o pdf/resume-ATS.pdf --pdf-engine=wkhtmltopdf
