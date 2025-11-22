@@ -129,7 +129,8 @@ Acostumbrado a **responsabilidades de nivel administrador** en múltiples cuenta
 
 ## 🎓 Educación
 
-<img src="img/UNS-logo.png" alt="Universidad Nacional del Sur" width="120" align="right"/>
+<img src="img/cs-uns-white-3.png" alt="Departamento de Ciencias de la Computación" width="120" height="120" align="right" style="margin-left: 10px;"/>
+<img src="img/uns-white-2.jpg" alt="Universidad Nacional del Sur" width="120" height="120" align="right" style="margin-left: 10px; margin-bottom: 10px;"/>
 
 ### Ingeniero en Sistemas de Computación (MEQ)
 
