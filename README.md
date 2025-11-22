@@ -68,6 +68,7 @@ On every push to `main`, the workflow:
 4. Commits them to the `pdf/` folder.
 
 **Direct download links:**
+
 - [jere-cloud-resume.pdf](pdf/jere-cloud-resume.pdf)
 - [jere-cloud-resume-es.pdf](pdf/jere-cloud-resume-es.pdf)
 - [jere-basic-resume.pdf](pdf/jere-basic-resume.pdf)

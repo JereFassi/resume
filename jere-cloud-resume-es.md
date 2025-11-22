@@ -133,6 +133,9 @@ Acostumbrado a **responsabilidades de nivel administrador** en múltiples cuenta
 
 **Universidad Nacional del Sur** – Bahía Blanca, Argentina
 
+**[Universidad Nacional del Sur](https://uns.edu.ar)** |
+**[Departamento de Ciencias de la Computación](https://cs.uns.edu.ar)**
+
 **Proyecto Final (Tesis):**  
 _"Aulas Sustentables: Sistema de Automatización basado en IoT para la Optimización de Energía Eléctrica"_
 

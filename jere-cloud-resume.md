@@ -133,6 +133,9 @@ Accustomed to **admin-level responsibilities** across multiple AWS accounts: acc
 
 **Universidad Nacional del Sur** – Bahía Blanca, Argentina
 
+**[Universidad Nacional del Sur](https://uns.edu.ar)** |
+**[Computer Science Department](https://cs.uns.edu.ar)**
+
 **Final Project (Thesis):**  
 _"Aulas Sustentables: Automation System based on IoT for the Optimization of Electric Energy"_
 
