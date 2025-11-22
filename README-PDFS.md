@@ -10,28 +10,28 @@ PDFs are generated **locally** using Chrome/Edge for the best quality and emoji 
 .\generate-local-pdfs.ps1
 ```
 
-### Automatic Generation (Git Pre-Push Hook)
+### Automatic Generation (Git Pre-Commit Hook)
 
-A Git hook automatically regenerates PDFs before each push to keep them in sync with markdown changes.
+A Git hook automatically regenerates PDFs **when you commit changes** to markdown resume files.
 
 **Setup the hook** (one-time):
 
 ```powershell
 # Make the hook executable (Git Bash or WSL)
-chmod +x .git/hooks/pre-push
+chmod +x .git/hooks/pre-commit
 ```
 
 The hook will:
 
-1. Run before every `git push`
-2. Regenerate all PDFs
-3. Prompt you to commit PDF changes if detected
-4. Allow the push to continue
+1. Run before `git commit` if you've changed any resume markdown files
+2. Regenerate all PDFs automatically
+3. Add the updated PDFs to your commit
+4. Complete the commit with both markdown and PDF changes
 
-**Disable the hook temporarily:**
+**Skip the hook temporarily:**
 
 ```powershell
-git push --no-verify
+git commit --no-verify
 ```
 
 ## Why Local Generation?
@@ -52,5 +52,5 @@ The workflow now **validates** files instead of building PDFs:
 ## Files
 
 - `generate-local-pdfs.ps1` - Script for local PDF generation
-- `.git/hooks/pre-push` - Automatic pre-push hook
+- `.git/hooks/pre-commit` - Automatic pre-commit hook
 - `.github/workflows/build-pdf.yml` - Validation workflow
