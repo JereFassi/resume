@@ -1,89 +1,61 @@
-name: Build Resume PDFs
+name: Validate Resume Files
 
 permissions:
-  contents: write
+  contents: read
 
 on:
   push:
     branches: ["main"]
+  pull_request:
   workflow_dispatch:
 
 jobs:
-  build-pdf:
+  validate:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-        with:
-          token: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Install Pandoc and Chromium
+      - name: Check PDF files exist
         run: |
-          sudo apt-get update
-          sudo apt-get install -y pandoc chromium-browser fonts-noto-color-emoji fonts-liberation
-
-      - name: Generate PDFs with Chromium
-        run: |
-          mkdir -p pdf
-
-          # Function to convert markdown to PDF via Chromium
-          convert_to_pdf() {
-            local input_md=$1
-            local output_pdf=$2
-            local title=$3
-            
-            echo "Generating $output_pdf..."
-            
-            # Convert markdown to HTML with Pandoc
-            pandoc "$input_md" -o temp_resume.html \
-              --standalone \
-              --css=.github/styles/resume.css \
-              --embed-resources
-            
-            # Convert HTML to PDF using Chromium
-            chromium-browser --headless=new --disable-gpu \
-              --print-to-pdf="$output_pdf" \
-              --no-margins \
-              --no-pdf-header-footer \
-              --run-all-compositor-stages-before-draw \
-              --virtual-time-budget=10000 \
-              "file://$(pwd)/temp_resume.html"
-            
-            # Clean up temp file
-            rm -f temp_resume.html
-          }
-
-          # Generate all PDFs
-          convert_to_pdf "jere-cloud-resume-en.md" "pdf/jere-cloud-resume-en.pdf" "Lucas Jeremias Fassi - Cloud Resume"
-          convert_to_pdf "jere-cloud-resume-es.md" "pdf/jere-cloud-resume-es.pdf" "Lucas Jeremias Fassi - CV Cloud"
-          convert_to_pdf "jere-basic-resume.md" "pdf/jere-basic-resume.pdf" "Lucas Jeremias Fassi - Resume"
-          convert_to_pdf "resume-ATS.md" "pdf/resume-ATS.pdf" "Lucas Jeremias Fassi - Resume (ATS)"
-
-          echo "All PDFs generated successfully with emoji support!"
-
-      - name: Commit PDFs
-        if: github.ref == 'refs/heads/main'
-        run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add -f pdf/*.pdf
-          if ! git diff --cached --quiet; then
-            git commit -m "Update PDF resumes [skip ci]"
-            git push
-          else
-            echo "No PDF changes to commit"
+          echo "Checking that PDF files are present..."
+          if [ ! -f "pdf/jere-cloud-resume-en.pdf" ]; then
+            echo "ERROR: pdf/jere-cloud-resume-en.pdf not found"
+            exit 1
           fi
-
-      - name: Upload PDFs as artifacts (fallback)
-        if: always()
-        uses: actions/upload-artifact@v4
-        with:
-          name: pdf-resumes
-          path: pdf/*.pdf
+          if [ ! -f "pdf/jere-cloud-resume-es.pdf" ]; then
+            echo "ERROR: pdf/jere-cloud-resume-es.pdf not found"
+            exit 1
+          fi
+          if [ ! -f "pdf/jere-basic-resume.pdf" ]; then
+            echo "ERROR: pdf/jere-basic-resume.pdf not found"
+            exit 1
+          fi
+          if [ ! -f "pdf/resume-ATS.pdf" ]; then
+            echo "ERROR: pdf/resume-ATS.pdf not found"
+            exit 1
+          fi
+          echo "✓ All PDF files present"
+          
+      - name: Validate markdown files
+        run: |
+          echo "Validating markdown structure..."
+          for md in jere-cloud-resume-en.md jere-cloud-resume-es.md jere-basic-resume.md resume-ATS.md; do
+            if [ ! -f "$md" ]; then
+              echo "ERROR: $md not found"
+              exit 1
+            fi
+            # Check if file has content
+            if [ ! -s "$md" ]; then
+              echo "ERROR: $md is empty"
+              exit 1
+            fi
+            echo "✓ $md is valid"
+          done
 
       - name: Validate JSON Resume (optional)
         if: hashFiles('resume.json') != ''
         run: |
           npm init -y
           npm install resume-cli@3
-          npx resume validate resume.json || echo "Validation failed"
+          npx resume validate resume.json || echo "Validation failed (non-blocking)"

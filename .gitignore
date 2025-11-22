@@ -1,1 +1,5 @@
-/pdf/
+# Temporary files
+temp_resume.html
+
+# Node modules if you add any JS tools
+node_modules/

@@ -30,11 +30,18 @@ if (-not $chrome) {
 # Create pdf directory if it doesn't exist
 New-Item -ItemType Directory -Force -Path pdf | Out-Null
 
-Write-Host ""
-Write-Host "NOTE: Please close all PDF files in the pdf/ folder before continuing." -ForegroundColor Yellow
-Write-Host "Press any key to continue or Ctrl+C to cancel..." -ForegroundColor Cyan
-$null = $Host.UI.RawUI.ReadKey("NoEcho,IncludeKeyDown")
-Write-Host ""
+# Check if running in non-interactive mode (e.g., from Git hook)
+$isNonInteractive = $MyInvocation.BoundParameters.ContainsKey('NonInteractive') -or 
+                    $env:CI -eq 'true' -or 
+                    [Environment]::GetCommandLineArgs() -contains '-NonInteractive'
+
+if (-not $isNonInteractive) {
+    Write-Host ""
+    Write-Host "NOTE: Please close all PDF files in the pdf/ folder before continuing." -ForegroundColor Yellow
+    Write-Host "Press any key to continue or Ctrl+C to cancel..." -ForegroundColor Cyan
+    $null = $Host.UI.RawUI.ReadKey("NoEcho,IncludeKeyDown")
+    Write-Host ""
+}
 
 # Function to convert markdown to PDF via Chrome
 function Convert-MarkdownToPdf {
