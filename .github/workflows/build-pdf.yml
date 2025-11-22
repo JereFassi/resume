@@ -1,0 +1,38 @@
+name: Build Resume PDFs
+
+on:
+  push:
+    branches: ["main"]
+  workflow_dispatch:
+
+jobs:
+  build-pdf:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Install Pandoc
+        run: sudo apt-get update && sudo apt-get install -y pandoc wkhtmltopdf
+
+      - name: Generate PDFs
+        run: |
+          pandoc jere-cloud-resume.md -o jere-cloud-resume.pdf --pdf-engine=wkhtmltopdf
+          pandoc jere-basic-resume.md -o jere-basic-resume.pdf --pdf-engine=wkhtmltopdf
+          pandoc resume-ATS.md -o resume-ATS.pdf --pdf-engine=wkhtmltopdf
+
+      - name: Upload Artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: resumes-pdf
+          path: |
+            jere-cloud-resume.pdf
+            jere-basic-resume.pdf
+            resume-ATS.pdf
+
+      - name: Validate JSON Resume (optional)
+        if: hashFiles('resume.json') != ''
+        run: |
+          npm init -y
+          npm install resume-cli@3
+          npx resume validate resume.json || echo "Validation failed"

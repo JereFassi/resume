@@ -1,0 +1,187 @@
+{
+  "$schema": "https://raw.githubusercontent.com/jsonresume/resume-schema/v1.0.0/schema.json",
+  "basics": {
+    "name": "Lucas Jeremias Fassi",
+    "label": "Cloud & Backend Engineer | AWS Infrastructure | DevOps",
+    "email": "jeremiasfassi@gmail.com",
+    "phone": "+54 2954 443595",
+    "location": {
+      "city": "Bahia Blanca",
+      "country": "Argentina"
+    },
+    "profiles": [
+      {
+        "network": "LinkedIn",
+        "username": "jeremias-fassi",
+        "url": "https://linkedin.com/in/jeremias-fassi"
+      },
+      {
+        "network": "GitHub",
+        "username": "JereFassi",
+        "url": "https://github.com/JereFassi"
+      }
+    ],
+    "summary": "Cloud and backend engineer with extensive experience designing, deploying, and operating AWS-based infrastructures. Hands-on with IAM, EC2, S3, RDS, Lambda, CloudWatch, CodePipeline, Docker, Linux, and shell scripting. Admin-level responsibilities across multiple AWS accounts: access management, security hardening, monitoring, cost control, CI/CD automation. Background as backend developer (Node.js/TypeScript, PHP) and university lecturer. Seeking part-time, remote cloud/infrastructure roles (AWS administration, DevOps support, infrastructure maintenance, automation)."
+  },
+  "work": [
+    {
+      "name": "EYCON",
+      "position": "Cloud & Backend Engineer",
+      "startDate": "2024-01",
+      "url": "https://eycon.com",
+      "summary": "Architect and manage AWS infrastructure for multiple client projects; backend services (TypeScript, PHP); CI/CD pipelines; monitoring and DevOps automation.",
+      "highlights": [
+        "Administer IAM users/roles/policies and multi-account access.",
+        "Configure and maintain EC2, S3, RDS, Lambda, CloudWatch, CodePipeline.",
+        "Implement and maintain CI/CD pipelines (CodeCommit + CodePipeline).",
+        "Monitor systems and optimize performance; address incidents related to deployments, networking, scaling.",
+        "Collaborate on security, cost optimization, and infrastructure best practices."
+      ]
+    },
+    {
+      "name": "Aleator SRL",
+      "position": "Senior Developer & Cloud/IT Junior",
+      "startDate": "2018-01",
+      "endDate": "2024-01",
+      "url": "https://aleator.com.br",
+      "summary": "Led development and support of CRM web application; managed AWS cloud infrastructure.",
+      "highlights": [
+        "Managed AWS cloud infrastructure (EC2, S3, RDS).",
+        "Designed and implemented integrations (AFIP, financial entities, OTT, ISP provisioning APIs).",
+        "Performed migrations from legacy systems including data migration and deployment planning.",
+        "Contributed to infrastructure monitoring, backup strategies, environment configuration."
+      ]
+    },
+    {
+      "name": "Fantastic LLC",
+      "position": "Cloud Admin (Remote)",
+      "startDate": "2022-01",
+      "endDate": "2023-12",
+      "url": "https://fantastic.app",
+      "summary": "Administered AWS infrastructure for SaaS product; security, networking, automation.",
+      "highlights": [
+        "Managed IAM, EC2, S3, RDS, Amplify, CodeCommit, pipeline configurations.",
+        "Supported security, networking (VPC, security groups), logging/monitoring via CloudWatch and Lambdas.",
+        "Participated in defining infrastructure standards and deployment practices."
+      ]
+    },
+    {
+      "name": "Control Service",
+      "position": "Junior Developer",
+      "startDate": "2012-01",
+      "endDate": "2018-12",
+      "url": "https://control-service.com.ar",
+      "summary": "Re-engineering of main management system; legacy migration and device integration.",
+      "highlights": [
+        "Migrated Visual Basic + Access systems to Java + SQL Server.",
+        "Integrated remote devices into updated architecture.",
+        "Updated documentation and reports."
+      ]
+    }
+  ],
+  "education": [
+    {
+      "institution": "Universidad Nacional del Sur",
+      "area": "Computer Systems Engineering",
+      "studyType": "Degree (MEQ)",
+      "endDate": "2020",
+      "url": "https://github.com/uns-tesis-fassi-salazar/tesis",
+      "summary": "Final Project (Thesis): 'Aulas Sustentables: Automation System based on IoT for the Optimization of Electric Energy.' IoT-based classroom automation integrated with cloud services. Awarded 3rd place CoNaIISI 2020 (Final Degree Projects)."
+    }
+  ],
+  "awards": [
+    {
+      "title": "CoNaIISI 2020 – 3rd place Final Degree Projects",
+      "date": "2020-11",
+      "awarder": "Congreso Nacional de Ingenieria Informatica - Sistemas de Informacion",
+      "summary": "Recognition for thesis on IoT-based classroom energy optimization."
+    }
+  ],
+  "skills": [
+    {
+      "name": "Cloud & Infrastructure (AWS)",
+      "keywords": [
+        "IAM (users, roles, policies, least privilege)",
+        "EC2 (provisioning, hardening, backups, SSH)",
+        "S3 (buckets, lifecycle, static hosting, backups)",
+        "RDS (PostgreSQL, MySQL, performance, backups, security)",
+        "Lambda (serverless, automation, integrations)",
+        "CloudWatch (logs, metrics, alarms, dashboards)",
+        "CodeCommit",
+        "CodePipeline",
+        "Amplify",
+        "VPC, subnets, security groups, routing"
+      ]
+    },
+    {
+      "name": "DevOps & Automation",
+      "keywords": [
+        "Docker",
+        "Docker Compose",
+        "CI/CD design and maintenance",
+        "Linux administration (Ubuntu, server hardening, systemd)",
+        "Shell scripting, Bash, cron jobs",
+        "Monitoring and alerting",
+        "Logging pipelines"
+      ]
+    },
+    {
+      "name": "Backend & Databases",
+      "keywords": [
+        "Node.js (TypeScript)",
+        "PHP",
+        "PostgreSQL",
+        "MySQL",
+        "UniVerse DB",
+        "API integrations (payments, government, OTT)"
+      ]
+    },
+    {
+      "name": "Other",
+      "keywords": [
+        "Git",
+        "GitHub",
+        "Documentation",
+        "Teaching and mentoring"
+      ]
+    }
+  ],
+  "languages": [
+    {
+      "language": "Spanish",
+      "fluency": "Native"
+    },
+    {
+      "language": "English",
+      "fluency": "Advanced (B2+)"
+    },
+    {
+      "language": "Portuguese",
+      "fluency": "Basic"
+    }
+  ],
+  "certificates": [
+    {
+      "name": "Python Fullstack",
+      "date": "2023",
+      "issuer": "Training Program"
+    },
+    {
+      "name": "Django Web Development",
+      "date": "2023",
+      "issuer": "Training Program"
+    }
+  ],
+  "interests": [
+    {
+      "name": "Part-time Cloud/Infrastructure Roles",
+      "keywords": [
+        "AWS administration and maintenance (10-20 hours/week)",
+        "Infrastructure & DevOps support",
+        "CI/CD setup and improvements",
+        "Linux server administration",
+        "Monitoring, automation, security hardening"
+      ]
+    }
+  ]
+}
