@@ -17,20 +17,19 @@ jobs:
 
       - name: Generate PDFs
         run: |
-          pandoc jere-cloud-resume.md -o jere-cloud-resume.pdf --pdf-engine=wkhtmltopdf
-          pandoc jere-cloud-resume-es.md -o jere-cloud-resume-es.pdf --pdf-engine=wkhtmltopdf
-          pandoc jere-basic-resume.md -o jere-basic-resume.pdf --pdf-engine=wkhtmltopdf
-          pandoc resume-ATS.md -o resume-ATS.pdf --pdf-engine=wkhtmltopdf
+          mkdir -p pdf
+          pandoc jere-cloud-resume.md -o pdf/jere-cloud-resume.pdf --pdf-engine=wkhtmltopdf
+          pandoc jere-cloud-resume-es.md -o pdf/jere-cloud-resume-es.pdf --pdf-engine=wkhtmltopdf
+          pandoc jere-basic-resume.md -o pdf/jere-basic-resume.pdf --pdf-engine=wkhtmltopdf
+          pandoc resume-ATS.md -o pdf/resume-ATS.pdf --pdf-engine=wkhtmltopdf
 
-      - name: Upload Artifacts
-        uses: actions/upload-artifact@v4
-        with:
-          name: resumes-pdf
-          path: |
-            jere-cloud-resume.pdf
-            jere-cloud-resume-es.pdf
-            jere-basic-resume.pdf
-            resume-ATS.pdf
+      - name: Commit PDFs
+        run: |
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+          git add pdf/*.pdf
+          git diff --staged --quiet || git commit -m "Auto-generate PDFs [skip ci]"
+          git push
 
       - name: Validate JSON Resume (optional)
         if: hashFiles('resume.json') != ''

@@ -1,5 +1,12 @@
 # Lucas Jeremias Fassi – Resume Repository
 
+![GitHub last commit](https://img.shields.io/github/last-commit/JereFassi/resume?style=flat-square)
+![GitHub repo size](https://img.shields.io/github/repo-size/JereFassi/resume?style=flat-square)
+![GitHub stars](https://img.shields.io/github/stars/JereFassi/resume?style=flat-square)
+![GitHub forks](https://img.shields.io/github/forks/JereFassi/resume?style=flat-square)
+![Build Status](https://img.shields.io/github/actions/workflow/status/JereFassi/resume/build-pdf.yml?branch=main&style=flat-square&label=PDF%20Build)
+![License](https://img.shields.io/badge/license-All%20Rights%20Reserved-red?style=flat-square)
+
 This repository hosts my resume in multiple developer-friendly formats:
 
 - `jere-cloud-resume.md` – Cloud & infrastructure-focused version (AWS admin, DevOps, part-time roles).
@@ -25,6 +32,7 @@ This repository hosts my resume in multiple developer-friendly formats:
 | `jere-basic-resume.md`            | General software engineering resume (backend, full-stack, teaching). |
 | `resume-ATS.md`                   | Simplified ATS-optimized version.                                    |
 | `resume.json`                     | Structured data for tooling / APIs based on JSON Resume schema.      |
+| `pdf/`                            | Auto-generated PDF versions (updated on push to main).               |
 | `.github/workflows/build-pdf.yml` | Action to generate PDF artifacts via Pandoc.                         |
 
 ## Generate PDF Locally
@@ -56,10 +64,14 @@ On every push to `main`, the workflow:
 
 1. Checks out repository.
 2. Installs Pandoc.
-3. Generates PDFs for both Markdown versions.
-4. Uploads them as build artifacts.
+3. Generates PDFs for all resume versions.
+4. Commits them to the `pdf/` folder.
 
-Download from the Actions run summary.
+**Direct download links:**
+- [jere-cloud-resume.pdf](pdf/jere-cloud-resume.pdf)
+- [jere-cloud-resume-es.pdf](pdf/jere-cloud-resume-es.pdf)
+- [jere-basic-resume.pdf](pdf/jere-basic-resume.pdf)
+- [resume-ATS.pdf](pdf/resume-ATS.pdf)
 
 ## JSON Resume Usage
 
@@ -76,12 +88,6 @@ npm install -g resume-cli
 resume validate
 resume export resume.html
 ```
-
-## Suggested Future Enhancements
-
-- Add Spanish and Portuguese localized versions (`JereCV-es.md`, `JereCV-pt.md`).
-- Integrate shields (e.g. GitHub profile visits) in README.
-- Add a changelog summarizing major updates.
 
 ## Contributing / Feedback
 
