@@ -112,8 +112,8 @@ Accustomed to **admin-level responsibilities** across multiple AWS accounts: acc
 
 ## 🎓 Academic Experience
 
-<img src="img/Logo_UTN-FRBB.png" alt="UTN-FRBB" width="120">
-<img src="img/UTN_logo.jpg" alt="UTN" width="120">
+<img src="img/Logo_UTN-FRBB.png" alt="UTN-FRBB" width="120" height="60" align="right" style="margin-left: 10px; margin-bottom: 10px;"/>
+<img src="img/UTN_logo.jpg" alt="UTN" width="120" height="120" align="right" style="margin-left: 10px;"/>
 
 ### Lecturer – Technical Degree in Programming
 
@@ -134,8 +134,8 @@ Accustomed to **admin-level responsibilities** across multiple AWS accounts: acc
 
 ## 🎓 Education
 
-<img src="img/cs-uns-white-3.png" alt="CS-UNS" width="120">
-<img src="img/uns-white-2.jpg" alt="UNS" width="120">
+<img src="img/cs-uns-white-3.png" alt="CS-UNS" width="120" height="120" align="right" style="margin-left: 10px;"/>
+<img src="img/uns-white-2.jpg" alt="UNS" width="120" height="120" align="right" style="margin-left: 10px; margin-bottom: 10px;"/>
 
 ### Computer Systems Engineer (MEQ)
 

@@ -56,6 +56,8 @@ Computer Systems Engineer focused on backend development and AWS cloud architect
 
 ## Academic Experience
 
+<img src="img/UTN_logo.jpg" alt="Universidad Nacional del Sur" width="100" align="right"/>
+
 **Lecturer – Technical Degree in Programming** (2025 – Present)  
 Universidad Tecnológica Nacional (UTN)  
 Courses: Architecture & Operating Systems (64h), Methodology of Systems II (64h)  
@@ -63,7 +65,7 @@ Topics: OS fundamentals, system architecture, Git, Docker, software methodologie
 
 ## Education
 
-<img src="img/UNS-logo.png" alt="Universidad Nacional del Sur" width="100" align="right"/>
+<img src="img/uns-white-2.jpg" alt="Universidad Nacional del Sur" width="100" align="right"/>
 
 **Computer Systems Engineer (MEQ)** — [Universidad Nacional del Sur](https://uns.edu.ar)  
 Thesis: IoT-based classroom energy optimization system.  
