@@ -49,7 +49,7 @@ Parameters:
     Description: Second private subnet for the DB subnet group.
   RDSSecurityGroupId:
     Type: AWS::EC2::SecurityGroup::Id
-    Description: Security group that allows MySQL access from the web tier.
+    Description: Security group that allows PostgreSQL access from the web tier.
 
 Resources:
   DBSubnetGroup:
@@ -68,8 +68,8 @@ Resources:
     Properties:
       AllocatedStorage: !Ref DBAllocatedStorage
       DBInstanceClass: !Ref DBInstanceClass
-      Engine: mysql
-      EngineVersion: "8.0"
+      Engine: postgres
+      EngineVersion: "17.4"
       MasterUsername: !Ref DBUsername
       MasterUserPassword: !Ref DBPassword
       DBSubnetGroupName: !Ref DBSubnetGroup
@@ -83,8 +83,7 @@ Resources:
       DeletionProtection: false
       DeleteAutomatedBackups: true
       EnableCloudwatchLogsExports:
-        - error
-        - slowquery
+        - postgresql
       Tags:
         - Key: Name
           Value: !Sub ${ProjectName}-${Environment}-db

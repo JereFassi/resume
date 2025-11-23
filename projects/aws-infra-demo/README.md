@@ -1,13 +1,13 @@
 # AWS Infra Demo (CloudFormation)
 
-CloudFormation sample that stands up a minimal VPC with an EC2 web server, MySQL RDS instance, and a private S3 bucket. A companion pipeline template shows how to deploy the stack with CodeCommit + CodeBuild + CodePipeline.
+CloudFormation sample that stands up a minimal VPC with an EC2 web server, PostgreSQL RDS instance, and a private S3 bucket. A companion pipeline template shows how to deploy the stack with CodeCommit + CodeBuild + CodePipeline.
 
 ## What's here
 - `templates/main.yaml` – Entry point that nests the networking, IAM, EC2, and RDS templates.
 - `templates/networking.yaml` – VPC (1 public, 2 private subnets), routing, and security groups.
 - `templates/iam.yaml` – EC2 role and instance profile.
 - `templates/ec2.yaml` – App bucket and EC2 web server.
-- `templates/rds.yaml` – MySQL RDS instance and subnet group.
+- `templates/rds.yaml` – PostgreSQL RDS instance and subnet group.
 - `templates/pipeline.yaml` – Pipeline that pulls from CodeCommit, runs CodeBuild validation, and deploys the infra stack via CloudFormation.
 - `buildspec.yml` – Build recipe used by CodeBuild to package/validate the templates and pass them to the deploy stage.
 
