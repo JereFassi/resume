@@ -1,7 +1,7 @@
 LUCAS JEREMÍAS FASSI  
 Cloud & Backend Engineer | AWS | DevOps | Lecturer
 Bahía Blanca, Argentina  
-Email: jeremiasfassi@gmail.com | Tel: +54 2954 443595  
+Email: jeremiasfassi@gmail.com
 LinkedIn: linkedin.com/in/jeremias-fassi | GitHub: github.com/JereFassi
 
 ---

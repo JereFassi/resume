@@ -8,7 +8,6 @@
 ## 📬 Contact
 
 **Email:** jeremiasfassi@gmail.com  
-**Phone:** +54 2954 443595  
 **LinkedIn:** [linkedin.com/in/jeremias-fassi](https://linkedin.com/in/jeremias-fassi)  
 **GitHub:** [github.com/JereFassi](https://github.com/JereFassi)
 

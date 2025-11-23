@@ -1,7 +1,7 @@
 LUCAS JEREMIAS FASSI
 Cloud and Backend Engineer | AWS Infrastructure | Docker | CI/CD
 Location: Bahia Blanca, Argentina (Remote-ready)
-Email: jeremiasfassi@gmail.com | Phone: +54 2954 443595
+Email: jeremiasfassi@gmail.com
 LinkedIn: https://linkedin.com/in/jeremias-fassi
 GitHub: https://github.com/JereFassi
 
