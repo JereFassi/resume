@@ -18,7 +18,7 @@
 
 ## 👨‍💻 Professional Summary
 
-Cloud and backend engineer with strong experience **designing, deploying, and operating AWS-based infrastructures** for web applications and business systems. Hands-on with IAM, EC2, S3, RDS, Lambda, CloudWatch and CodePipeline, plus Docker, Linux and shell scripting.
+Cloud and backend engineer with strong experience **designing, deploying, and operating AWS-based infrastructures** for web applications and business systems. Hands-on with IAM, EC2, S3, RDS, Lambda, CloudWatch, CodePipeline and CloudFormation, plus Docker, Linux and shell scripting.
 
 Accustomed to **admin-level responsibilities** across multiple AWS accounts: access management, security hardening, monitoring, cost control and CI/CD automation. Background as a backend developer (Node.js/TypeScript, PHP) and university lecturer, which helps to communicate clearly with both technical and non-technical stakeholders.
 
@@ -38,6 +38,7 @@ Accustomed to **admin-level responsibilities** across multiple AWS accounts: acc
 - **CloudWatch** · Logs, metrics, alarms, dashboards
 - **CI/CD** · CodeCommit, CodePipeline, Amplify (for web apps and APIs)
 - **Networking** · VPC, subnets, security groups, basic routing
+- **CloudFormation** · Infrastructure as Code templates
 
 ### 🔧 DevOps & Automation
 
@@ -45,7 +46,8 @@ Accustomed to **admin-level responsibilities** across multiple AWS accounts: acc
 - **CI/CD** · Design and maintenance
 - **Linux Administration** · Ubuntu, server hardening, systemd services
 - **Shell Scripting** · Maintenance scripts, cron jobs
-- **Monitoring & Alerting** · Basic logging pipelines
+- **Monitoring & Alerting** · Grafana, Prometheus, CloudWatch, email/Discord/Slack notifications, etc.
+- **Logging Basics** · Structured log pipelines
 
 ### 💻 Backend & Databases
 
@@ -68,43 +70,43 @@ Accustomed to **admin-level responsibilities** across multiple AWS accounts: acc
 **EYCON** · [eycon.com](https://eycon.com)  
 📍 Bahía Blanca, Argentina · 📅 2024 – Present
 
-- Architect and manage AWS infrastructure for multiple client projects
-- Administer IAM users/roles/policies and multi-account access
-- Configure and maintain EC2, S3, RDS, Lambda, CloudWatch, CodePipeline
-- Implement and maintain CI/CD pipelines (CodeCommit + CodePipeline) for backend services
-- Monitor systems and optimize performance, addressing incidents related to deployments, networking and scaling
-- Support backend development in TypeScript (Node.js) and PHP for internal and client solutions
-- Collaborate with teams on security, cost optimization and infrastructure best practices
+- Architect and manage AWS infrastructure for multiple client projects.
+- Administer IAM users/roles/policies and multi-account access.
+- Configure and maintain EC2, S3, RDS, Lambda, CloudWatch, CodePipeline, CloudFormation, etc.
+- Implement and maintain CI/CD pipelines (CodeCommit + CodePipeline) for backend services.
+- Monitor systems and optimize performance, addressing incidents related to deployments, networking and scaling.
+- Support backend development in TypeScript (Node.js) and PHP for internal and client solutions.
+- Collaborate with teams on security, cost optimization and infrastructure best practices.
 
 ### Senior Developer & Cloud / IT Junior
 
 **ALEATOR S.R.L.** · [aleator.com.br](https://aleator.com.br)  
 📍 Bahía Blanca, Argentina · 📅 2018 – 2024
 
-- Led development and support of the company's CRM web application
-- Managed AWS cloud infrastructure for the platform, including EC2, S3, RDS and related services
-- Designed and implemented integrations with external systems (AFIP, financial entities, OTT platforms, ISP provisioning APIs)
-- Performed migrations from legacy client systems to the new CRM, including data migration and deployment planning
-- Contributed to infrastructure monitoring, backup strategies and environment configuration
+- Analyzed requirements, developed, implemented and supported the company's CRM web application.
+- Managed AWS cloud infrastructure for the platform, including EC2, S3, RDS and related services.
+- Designed and implemented integrations with external systems (AFIP, financial entities, OTT platforms, ISP provisioning APIs).
+- Performed migrations from legacy client systems to the new CRM, including data migration and deployment planning.
+- Contributed to infrastructure monitoring, backup strategies and environment configuration.
 
 ### Cloud Admin (Remote)
 
 **FANTASTIC LLC** · [fantastic.app](https://fantastic.app)  
 📍 San Francisco, USA (Remote) · 📅 2022 – 2023
 
-- Administered AWS infrastructure for a SaaS product
-- Managed IAM, EC2, S3, RDS, Amplify, CodeCommit and pipeline configurations
-- Supported security, networking (VPC, security groups) and logging/monitoring through CloudWatch and Lambdas
-- Participated in the definition of infrastructure standards and deployment practices for the teamm
+- Administered AWS infrastructure for a social network + blockchain product.
+- Managed IAM, EC2, S3, RDS, Amplify, CodeCommit, CodePipeline, CodeDeploy and related pipeline configurations.
+- Supported security, networking (VPC, security groups) and logging/monitoring through CloudWatch and Lambda notifications.
+- Participated in the definition of infrastructure standards and deployment practices for the team.
 
 ### Junior Developer
 
 **CONTROL SERVICE** · [control-service.com.ar](https://control-service.com.ar)  
 📍 Bahía Blanca, Argentina · 📅 2012 – 2018
 
-- Participated in the re-engineering of the company's main management system
-- Migrated legacy Visual Basic + AccessDB application to Java + SQL Server
-- Integrated remote devices and updated reports and documentation
+- Re-engineering of the company's main management system, Windows Desktop application.
+- Migrated legacy Visual Basic + AccessDB application to Java + SQL Server.
+- Integrated remote devices and updated reports and documentation.
 
 ---
 
@@ -125,8 +127,8 @@ Accustomed to **admin-level responsibilities** across multiple AWS accounts: acc
 
 **Responsibilities:**
 
-- Design and deliver theoretical and practical content on operating systems, software architecture, Docker, Git and DevOps practices
-- Guide student projects and contribute to academic planning and evaluation
+- Design and deliver theoretical and practical content on operating systems, software architecture, Docker, Git and DevOps practices and culture.
+- Guide student projects and contribute to academic planning and evaluation.
 
 ---
 
