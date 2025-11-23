@@ -91,7 +91,7 @@ Acostumbrado a **responsabilidades de nivel administrador** en múltiples cuenta
 
 ### Administrador Cloud (Remoto)
 
-**FANTASTIC LLC** · [fantastic.app](https://fantastic.app)  
+**FANSTASTIC LLC** · [fanstastic.app](https://fanstastic.app)  
 📍 San Francisco, USA (Remoto) · 📅 2022 – 2023
 
 - Administración de infraestructura AWS para un producto tipo red social + blockchain.

@@ -34,7 +34,7 @@ Computer Systems Engineer focused on backend development and AWS cloud architect
 - Build and refine CI/CD workflows with CodeCommit & CodePipeline.
 - Implement monitoring & incident response; apply DevOps and automation best practices.
 
-**Fantastic LLC — Cloud Admin / IT** (2022 – 2023)
+**Fanstastic LLC — Cloud Admin / IT** (2022 – 2023)
 
 - Administer AWS services (IAM, EC2, S3, RDS, Amplify, Pipelines).
 - Configure security policies, networking, and access controls.

@@ -91,7 +91,7 @@ Accustomed to **admin-level responsibilities** across multiple AWS accounts: acc
 
 ### Cloud Admin (Remote)
 
-**FANTASTIC LLC** · [fantastic.app](https://fantastic.app)  
+**FANSTASTIC LLC** · [fanstastic.app](https://fanstastic.app)  
 📍 San Francisco, USA (Remote) · 📅 2022 – 2023
 
 - Administered AWS infrastructure for a social network + blockchain product.
