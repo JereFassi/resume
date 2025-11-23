@@ -112,8 +112,8 @@ Accustomed to **admin-level responsibilities** across multiple AWS accounts: acc
 
 ## 🎓 Academic Experience
 
-<img src="img/Logo_UTN-FRBB.png" alt="Universidad Tecnológica Nacional - Bahía Blanca" width="120" height="60" align="right" style="margin-left: 10px; margin-bottom: 10px;"/>
-<img src="img/UTN_logo.jpg" alt="Universidad Tecnológica Nacional" width="120" height="120" align="right" style="margin-left: 10px;"/>
+![Universidad Tecnológica Nacional - Bahía Blanca](img/Logo_UTN-FRBB.png)
+![Universidad Tecnológica Nacional](img/UTN_logo.jpg)
 
 ### Lecturer – Technical Degree in Programming
 
@@ -134,8 +134,8 @@ Accustomed to **admin-level responsibilities** across multiple AWS accounts: acc
 
 ## 🎓 Education
 
-<img src="img/cs-uns-white-3.png" alt="Computer Science Department" width="120" height="120" align="right" style="margin-left: 10px;"/>
-<img src="img/uns-white-2.jpg" alt="Universidad Nacional del Sur" width="120" height="120" align="right" style="margin-left: 10px; margin-bottom: 10px;"/>
+![Computer Science Department](img/cs-uns-white-3.png)
+![Universidad Nacional del Sur](img/uns-white-2.jpg)
 
 ### Computer Systems Engineer (MEQ)
 
