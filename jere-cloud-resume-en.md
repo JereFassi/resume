@@ -142,6 +142,8 @@ Accustomed to **admin-level responsibilities** across multiple AWS accounts: acc
 **[Universidad Nacional del Sur](https://uns.edu.ar)** – Bahía Blanca, Argentina  
 **[Computer Science Department](https://cs.uns.edu.ar)**
 
+I completed a five-year degree in Computer Systems Engineering, combining rigorous mathematical and algorithmic training with practical experience in system design. The program covered core areas such as computer architecture, operating systems, databases, networking, and distributed systems, giving me a solid understanding of how software and hardware interact at scale. In the final years I worked on advanced topics including security, embedded systems, AI concepts, and system simulation, culminating in an IoT-based automation project deployed with cloud technologies. This education prepared me to analyze problems deeply and design reliable, scalable computing systems end to end.
+
 **Final Project (Thesis):**  
 _"Aulas Sustentables: Automation System based on IoT for the Optimization of Electric Energy"_
 

@@ -67,6 +67,8 @@ Topics: OS fundamentals, system architecture, Git, Docker, software methodologie
 
 <img src="img/uns-white-2.jpg" alt="Universidad Nacional del Sur" width="100" align="right"/>
 
+I completed a five-year Computer Systems Engineering degree, with a strong foundation in algorithms, data structures, operating systems, networks, databases, and distributed systems. The program combined mathematical rigor with practical system design, giving me the ability to understand and build complex software and cloud architectures.
+
 **Computer Systems Engineer (MEQ)** — [Universidad Nacional del Sur](https://uns.edu.ar)  
 Thesis: IoT-based classroom energy optimization system.  
 Award: 3rd place CoNaIISI 2020 (Final Degree Projects)

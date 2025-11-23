@@ -142,8 +142,7 @@ Acostumbrado a **responsabilidades de nivel administrador** en múltiples cuenta
 **[Universidad Nacional del Sur](https://uns.edu.ar)** – Bahía Blanca, Argentina  
 **[Departamento de Ciencias e Ingeniería de la Computación](https://cs.uns.edu.ar)**
 
-**[Universidad Nacional del Sur](https://uns.edu.ar)** |
-**[Departamento de Ciencias de la Computación](https://cs.uns.edu.ar)**
+Completé una carrera de cinco años en Ingeniería en Sistemas de Computación, combinando una formación rigurosa en matemáticas y algoritmos con experiencia práctica en diseño de sistemas. La carrera abarcó áreas centrales como arquitectura de computadoras, sistemas operativos, bases de datos, redes y sistemas distribuidos, brindándome una comprensión sólida de cómo interactúan el software y el hardware a escala. En los últimos años trabajé en temas avanzados que incluyen seguridad, sistemas embebidos, conceptos de IA y simulación de sistemas, culminando en un proyecto de automatización basado en IoT desplegado con tecnologías cloud. Esta educación me preparó para analizar problemas en profundidad y diseñar sistemas informáticos confiables y escalables de extremo a extremo.
 
 **Proyecto Final (Tesis):**  
 _"Aulas Sustentables: Sistema de Automatización basado en IoT para la Optimización de Energía Eléctrica"_
