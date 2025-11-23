@@ -191,6 +191,10 @@ Resources:
             Value: !Ref PipelineArtifactBucket
       Source:
         Type: CODEPIPELINE
+      LogsConfig:
+        CloudWatchLogs:
+          Status: ENABLED
+          GroupName: !Sub /aws/codebuild/${ProjectName}-${Environment}-build
       TimeoutInMinutes: 10
       Tags:
         - Key: Name
