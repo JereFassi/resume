@@ -112,8 +112,8 @@ Acostumbrado a **responsabilidades de nivel administrador** en múltiples cuenta
 
 ## 🎓 Experiencia Académica
 
-![Universidad Tecnológica Nacional - Bahía Blanca](img/Logo_UTN-FRBB.png)
-![Universidad Tecnológica Nacional](img/UTN_logo.jpg)
+<img src="img/Logo_UTN-FRBB.png" alt="UTN-FRBB" width="120">
+<img src="img/UTN_logo.jpg" alt="UTN" width="120">
 
 ### Docente – Tecnicatura Universitaria en Programación
 
@@ -134,8 +134,8 @@ Acostumbrado a **responsabilidades de nivel administrador** en múltiples cuenta
 
 ## 🎓 Educación
 
-![Departamento de Ciencias de la Computación](img/cs-uns-white-3.png)
-![Universidad Nacional del Sur](img/uns-white-2.jpg)
+<img src="img/cs-uns-white-3.png" alt="CS-UNS" width="120">
+<img src="img/uns-white-2.jpg" alt="UNS" width="120">
 
 ### Ingeniero en Sistemas de Computación (MEQ)
 
