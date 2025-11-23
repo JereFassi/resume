@@ -1,0 +1,46 @@
+AWSTemplateFormatVersion: "2010-09-09"
+Description: >
+  IAM resources for the AWS infra demo EC2 instance.
+
+Parameters:
+  ProjectName:
+    Type: String
+    Description: Short name used for tagging and resource naming.
+  Environment:
+    Type: String
+    AllowedValues: [dev, test, prod]
+    Description: Environment label added to resource names and tags.
+
+Resources:
+  EC2Role:
+    Type: AWS::IAM::Role
+    Properties:
+      AssumeRolePolicyDocument:
+        Version: "2012-10-17"
+        Statement:
+          - Effect: Allow
+            Principal:
+              Service: ec2.amazonaws.com
+            Action: sts:AssumeRole
+      ManagedPolicyArns:
+        - arn:aws:iam::aws:policy/AmazonSSMManagedInstanceCore
+        - arn:aws:iam::aws:policy/AmazonS3ReadOnlyAccess
+      Path: /
+      Tags:
+        - Key: Name
+          Value: !Sub ${ProjectName}-${Environment}-ec2-role
+
+  EC2InstanceProfile:
+    Type: AWS::IAM::InstanceProfile
+    Properties:
+      Roles:
+        - !Ref EC2Role
+      Path: /
+
+Outputs:
+  EC2RoleName:
+    Description: IAM role name for the EC2 instance.
+    Value: !Ref EC2Role
+  InstanceProfileName:
+    Description: Instance profile name for the EC2 instance.
+    Value: !Ref EC2InstanceProfile

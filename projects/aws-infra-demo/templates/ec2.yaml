@@ -1,0 +1,121 @@
+AWSTemplateFormatVersion: "2010-09-09"
+Description: >
+  EC2 resources for the AWS infra demo, including security group association and user data.
+
+Parameters:
+  ProjectName:
+    Type: String
+    Description: Short name used for tagging and resource naming.
+  Environment:
+    Type: String
+    AllowedValues: [dev, test, prod]
+    Description: Environment label added to resource names and tags.
+  PublicSubnetId:
+    Type: AWS::EC2::Subnet::Id
+    Description: Public subnet where the EC2 instance will run.
+  EC2SecurityGroupId:
+    Type: AWS::EC2::SecurityGroup::Id
+    Description: Security group that allows SSH and HTTP access.
+  InstanceType:
+    Type: String
+    Default: t3.micro
+    AllowedValues:
+      - t3.nano
+      - t3.micro
+      - t3.small
+      - t3.medium
+      - t4g.nano
+      - t4g.micro
+      - t4g.small
+      - t4g.medium
+    Description: EC2 instance type for the web server.
+  EC2KeyPairName:
+    Type: AWS::EC2::KeyPair::KeyName
+    Description: Name of an existing EC2 KeyPair to enable SSH access to the instance.
+  LatestAmiId:
+    Type: "AWS::SSM::Parameter::Value<AWS::EC2::Image::Id>"
+    Default: /aws/service/ami-amazon-linux-latest/al2023-ami-kernel-6.1-x86_64
+    Description: SSM path for the latest Amazon Linux 2023 AMI.
+  InstanceProfileName:
+    Type: String
+    Description: Instance profile name attached to the EC2 instance.
+  EC2RoleName:
+    Type: String
+    Description: IAM role name used in the instance user data.
+  RDSEndpoint:
+    Type: String
+    Description: RDS endpoint passed to the instance user data.
+
+Resources:
+  AppBucket:
+    Type: AWS::S3::Bucket
+    Properties:
+      BucketName: !Sub ${ProjectName}-${Environment}-${AWS::AccountId}-${AWS::Region}-app
+      VersioningConfiguration:
+        Status: Enabled
+      PublicAccessBlockConfiguration:
+        BlockPublicAcls: true
+        BlockPublicPolicy: true
+        IgnorePublicAcls: true
+        RestrictPublicBuckets: true
+      BucketEncryption:
+        ServerSideEncryptionConfiguration:
+          - ServerSideEncryptionByDefault:
+              SSEAlgorithm: AES256
+      Tags:
+        - Key: Name
+          Value: !Sub ${ProjectName}-${Environment}-app-bucket
+
+  EC2Instance:
+    Type: AWS::EC2::Instance
+    Properties:
+      ImageId: !Ref LatestAmiId
+      InstanceType: !Ref InstanceType
+      IamInstanceProfile: !Ref InstanceProfileName
+      KeyName: !Ref EC2KeyPairName
+      SubnetId: !Ref PublicSubnetId
+      SecurityGroupIds:
+        - !Ref EC2SecurityGroupId
+      Tags:
+        - Key: Name
+          Value: !Sub ${ProjectName}-${Environment}-web
+      UserData:
+        Fn::Base64:
+          !Sub
+            - |
+              #!/bin/bash
+              set -e
+              dnf -y update
+              dnf -y install httpd awscli
+              systemctl enable --now httpd
+
+              cat > /var/www/html/index.html <<EOF
+              <html>
+                <head>
+                  <title>AWS Infra Demo</title>
+                  <style>
+                    body { font-family: Arial, sans-serif; margin: 40px; }
+                  </style>
+                </head>
+                <body>
+                  <h1>AWS Infra Demo</h1>
+                  <p>Instance role: ${EC2RoleName}</p>
+                  <p>S3 bucket: ${BucketName}</p>
+                  <p>RDS endpoint: ${RDSEndpoint}</p>
+                </body>
+              </html>
+              EOF
+            - EC2RoleName: !Ref EC2RoleName
+              BucketName: !Ref AppBucket
+              RDSEndpoint: !Ref RDSEndpoint
+
+Outputs:
+  InstanceId:
+    Description: EC2 instance id.
+    Value: !Ref EC2Instance
+  InstancePublicDNS:
+    Description: Public DNS name for the EC2 web server.
+    Value: !GetAtt EC2Instance.PublicDnsName
+  AppBucketName:
+    Description: Name of the application S3 bucket.
+    Value: !Ref AppBucket

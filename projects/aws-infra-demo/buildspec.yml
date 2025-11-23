@@ -1,0 +1,29 @@
+version: 0.2
+
+phases:
+  install:
+    runtime-versions:
+      python: 3.11
+  build:
+    commands:
+      - echo "Packaging nested CloudFormation stacks"
+      - aws cloudformation package --template-file templates/main.yaml --s3-bucket $PACKAGING_BUCKET --output-template-file templates/packaged-main.yaml
+      - echo "Validating CloudFormation templates"
+      - aws cloudformation validate-template --template-body file://templates/networking.yaml
+      - aws cloudformation validate-template --template-body file://templates/iam.yaml
+      - aws cloudformation validate-template --template-body file://templates/rds.yaml
+      - aws cloudformation validate-template --template-body file://templates/ec2.yaml
+      - aws cloudformation validate-template --template-body file://templates/packaged-main.yaml
+      - aws cloudformation validate-template --template-body file://templates/pipeline.yaml
+
+artifacts:
+  files:
+    - templates/main.yaml
+    - templates/packaged-main.yaml
+    - templates/networking.yaml
+    - templates/iam.yaml
+    - templates/ec2.yaml
+    - templates/rds.yaml
+    - templates/pipeline.yaml
+    - buildspec.yml
+    - README.md
